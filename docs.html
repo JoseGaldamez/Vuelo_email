@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Documentación - Vuelo.email</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-tint": "#004ced",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "on-tertiary-fixed-variant": "#891e00",
+                        "on-surface-variant": "#434656",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#545f73",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed": "#3c0800",
+                        "on-tertiary-container": "#ffddd5",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#dde1ff",
+                        "on-secondary-fixed": "#111c2d",
+                        "tertiary": "#952200",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "secondary-container": "#d5e0f8",
+                        "surface-container-high": "#e6e8ea",
+                        "tertiary-container": "#bf3003",
+                        "outline": "#737688",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3e5",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "primary-container": "#0052ff",
+                        "on-primary-fixed": "#001452",
+                        "tertiary-fixed": "#ffdbd2",
+                        "primary": "#003ec7",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c3c5d9",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#b7c4ff",
+                        "on-primary-container": "#dfe3ff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed": "#d8e3fb",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#586377"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .signature-gradient {
+            background: linear-gradient(135deg, #003ec7 0%, #0052ff 100%);
+        }
+
+        .kinetic-shadow {
+            box-shadow: 0 8px 24px rgba(0, 76, 237, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+    <!-- TopNavBar -->
+    <header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm shadow-blue-500/5">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div
+                class="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-50 font-headline flex items-center">
+                <a href="/" class="flex items-center">
+                    <img src="./images/envio-email-logo.png" alt="Vuelo.email" class="w-14 h-14" />
+                    Vuelo.email
+                </a>
+            </div>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors text-sm font-medium"
+                    href="index.html#features">Características</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors text-sm font-medium"
+                    href="index.html#technology">Tecnología</a>
+                <a class="text-blue-600 dark:text-blue-300 transition-colors text-sm font-bold"
+                    href="docs.html">Documentación</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors text-sm font-medium"
+                    href="about.html">Acerca de</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://play.google.com/store/apps/details?id=dev.josegaldamez.vueloemail" target="_blank"
+                    rel="noopener noreferrer"
+                    class="signature-gradient text-on-primary px-5 py-2.5 rounded-lg font-bold text-sm kinetic-shadow transition-transform hover:-translate-y-0.5 inline-block">Descargar</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24 min-h-screen px-6 max-w-4xl mx-auto">
+        <h1 class="font-headline font-extrabold text-4xl mb-8">Documentación del Proyecto</h1>
+        <div class="prose prose-slate dark:prose-invert max-w-none prose-lg text-secondary">
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">integration_instructions</span>
+                    1. Resumen Ejecutivo
+                </h2>
+                <div
+                    class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm mb-6">
+                    <p class="mb-4">El proyecto Vuelo consiste en la conceptualización, desarrollo e implementación de
+                        una plataforma de comunicación unificada omnicanal. El ecosistema combina un servidor de correo
+                        electrónico privado con un servidor de mensajería instantánea en tiempo real (XMPP), consumidos
+                        a través de una aplicación móvil nativa (Android).</p>
+                    <p>El objetivo principal alcanzado fue lograr una sincronización perfecta de identidades: con un
+                        solo registro, el usuario obtiene su cuenta de correo <strong>(@vuelo.email)</strong> y su
+                        acceso al chat instantáneo, operando ambas bajo el mismo par de credenciales.</p>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">architecture</span>
+                    2. Arquitectura de Sistemas y Tecnologías
+                </h2>
+                <p class="mb-4">El stack tecnológico seleccionado garantiza escalabilidad, control total de los datos y
+                    alto rendimiento:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div
+                        class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">cloud</span>
+                        <div><strong class="block text-on-surface">Infraestructura en la Nube</strong> Google Cloud
+                            Platform (GCP) - Ubuntu Server.</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">database</span>
+                        <div><strong class="block text-on-surface">Base de Datos Principal</strong> PostgreSQL.</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">mail</span>
+                        <div><strong class="block text-on-surface">Servidor de Correo</strong> Postfix (MTA) y Dovecot
+                            (IMAP/POP3).</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">forum</span>
+                        <div><strong class="block text-on-surface">Servidor de Mensajería</strong> Openfire (Protocolo
+                            XMPP / WebSockets).</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">api</span>
+                        <div><strong class="block text-on-surface">Backend / API de Puente</strong> Golang (Go) para
+                            lógica de unificación.</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">smartphone</span>
+                        <div><strong class="block text-on-surface">Frontend Móvil</strong> Flutter (Dart).</div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-4 md:col-span-2 rounded-xl border border-outline-variant/10 shadow-sm flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                        <span class="material-symbols-outlined text-primary mt-1">web</span>
+                        <div><strong class="block text-on-surface">Frontend Web / Landing Page</strong> HTML5, Tailwind
+                            CSS, y Apache2.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">sync</span>
+                    3. Desarrollo del Backend y Unificación de Cuentas
+                </h2>
+                <div
+                    class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm mb-6">
+                    <p class="mb-4">Uno de los retos arquitectónicos más complejos fue sincronizar la creación de
+                        usuarios entre la base de datos relacional de correo y la base de datos interna del servidor de
+                        chat.</p>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li><strong>API en Go:</strong> Se desarrolló un microservicio en Golang que actúa como
+                            intermediario seguro.</li>
+                        <li><strong>Integración REST con Openfire:</strong> Se utilizó el plugin UserService de
+                            Openfire. Se superó un desafío de seguridad impuesto por el parche del <em>CVE-2023-32315 en
+                                Openfire 4.8.x</em>, habilitando el uso de "wildcards"
+                            (<code>adminConsole.access.allow-wildcards-in-excludes = true</code>) para permitir la
+                            autenticación de la API mediante cabeceras autorizadas.</li>
+                        <li><strong>Flujo:</strong> Al registrarse un usuario desde la app móvil, la API en Go inscribe
+                            al usuario en PostgreSQL (para el correo) y lanza un POST autorizado hacia Openfire,
+                            unificando la identidad bajo el dominio @vuelo.email.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">support_agent</span>
+                    4. Estabilización del Servidor de Correo (Dovecot)
+                </h2>
+                <div
+                    class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm mb-6 border-l-4 border-l-tertiary">
+                    <p class="mb-4">Durante las pruebas de integración del cliente de correo en Flutter, se detectó un
+                        error al intentar acceder a la bandeja de enviados <em>(Mailbox doesn't exist)</em>.</p>
+                    <div class="bg-surface-container-low p-4 rounded-lg">
+                        <p class="mb-2"><strong>Solución:</strong> Se intervino la configuración interna del servidor
+                            Linux (<code>/etc/dovecot/conf.d/15-mailboxes.conf</code>).</p>
+                        <p>Se implementó la directiva <code>auto = subscribe</code> en los namespaces de las carpetas
+                            especiales (Drafts, Junk, Trash, Sent). Esto automatizó la creación física de los
+                            directorios en el servidor al momento del primer inicio de sesión del usuario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">forum</span>
+                    5. Implementación de Mensajería Instantánea (XMPP)
+                </h2>
+                <div
+                    class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm mb-6">
+                    <p class="mb-4">El componente de chat en tiempo real exigió una configuración minuciosa tanto a
+                        nivel de servidor como de red.</p>
+                    <ul class="list-disc pl-6 space-y-4">
+                        <li><strong>Configuración Openfire:</strong> Se habilitó el HTTP Binding y soporte CORS global
+                            (*) para permitir conexiones BOSH y WebSockets desde navegadores web, manteniendo la
+                            seguridad.</li>
+                        <li><strong>Gestión de Redes (Firewalls):</strong> Se configuraron múltiples capas de seguridad
+                            para permitir el tráfico TCP:
+                            <ul class="list-none pl-4 mt-3 space-y-2 text-sm border-l-2 border-surface-dim ml-2">
+                                <li
+                                    class="relative before:content-[''] before:absolute before:w-2 before:h-2 before:bg-primary before:rounded-full before:-left-5 before:top-1.5">
+                                    Apertura de puertos (7070, 7443, 5222) en el Firewall perimetral de Google Cloud
+                                    Platform (VPC).</li>
+                                <li
+                                    class="relative before:content-[''] before:absolute before:w-2 before:h-2 before:bg-primary before:rounded-full before:-left-5 before:top-1.5">
+                                    Reglas de tráfico interno usando el Uncomplicated Firewall (UFW) de Ubuntu.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">install_mobile</span>
+                    6. Desarrollo de la Aplicación Móvil (Flutter)
+                </h2>
+                <div
+                    class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm mb-6">
+                    <p class="mb-6 text-lg font-medium">La interfaz móvil evolucionó para alojar la dualidad del
+                        servicio (Correo + Chat) de manera intuitiva.</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">dashboard_customize</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">UI/UX</h4>
+                                <p class="text-sm">Se reestructuró la navegación implementando un BottomNavigationBar
+                                    para alternar entre "Bandeja de Entrada" e "Instantáneo", reubicando carpetas
+                                    secundarias (como Enviados) en un menú lateral (Drawer).</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">code_blocks</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Cliente XMPP</h4>
+                                <p class="text-sm">Se migró de la librería whixp (que presentaba incompatibilidades de
+                                    compilación FFI) a <code>xmpp_stone</code>, una solución escrita en Dart puro que
+                                    garantizó estabilidad multiplataforma.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-tertiary bg-tertiary/10 p-2 rounded-lg h-fit">wifi_protected_setup</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Blindaje de Conexión (Keep-Alive)</h4>
+                                <p class="text-sm mb-2">Se solucionó el problema de desconexión silenciosa por el modo
+                                    "Doze" de Android implementando:</p>
+                                <ul class="list-disc pl-5 text-sm space-y-1">
+                                    <li>XMPP Pings (XEP-0199): Temporizador periódico que envía stanzas de ping para
+                                        mantener vivo el socket TCP.</li>
+                                    <li>AppLifecycleObserver: Resurrección automática del estado y la conexión XMPP cada
+                                        vez que la app vuelve a primer plano.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">speed</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Optimización de Rendimiento</h4>
+                                <p class="text-sm">Se resolvió un error fatal (ANR - Application Not Responding)
+                                    agrupando las notificaciones de estado de la interfaz
+                                    (<code>notifyListeners()</code>) para evitar sobrecargar el hilo principal durante
+                                    la recepción masiva de contactos (Roster).</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span
+                                class="material-symbols-outlined text-green-600 bg-green-100 p-2 rounded-lg h-fit">verified</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface mb-1">Despliegue a Producción</h4>
+                                <p class="text-sm">Se configuraron permisos nativos explícitos (INTERNET,
+                                    ACCESS_NETWORK_STATE) y tolerancia a tráfico HTTP en texto plano
+                                    (<code>usesCleartextTraffic="true"</code>) en el <code>AndroidManifest.xml</code>
+                                    para pasar satisfactoriamente las revisiones de Google Play Console.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-headline font-extrabold text-3xl mb-6 text-primary flex items-center gap-3">
+                    <span class="material-symbols-outlined text-4xl">language</span>
+                    7. Despliegue de Landing Page
+                </h2>
+                <div
+                    class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10 shadow-sm mb-6">
+                    <p class="mb-4">Para completar el ecosistema omnicanal, se preparó la infraestructura web.</p>
+                    <ul class="list-disc pl-6 space-y-4">
+                        <li><strong>Landing Page:</strong> Se diseñó una página de aterrizaje moderna usando Tailwind
+                            CSS orientada a conversión, detallando los beneficios y el stack tecnológico de la
+                            plataforma.</li>
+                        <li><strong>Despliegue Apache2:</strong> Se resolvió un conflicto de "DocumentRoot" entre Nginx
+                            y Apache2 en el servidor de Ubuntu. El servicio Nginx fue desactivado en favor de Apache2,
+                            donde la Landing Page se desplegó con éxito asignando los permisos correctos al usuario
+                            <code>www-data</code> en la ruta correspondiente.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-900 mt-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
+            <div class="col-span-2 md:col-span-1">
+                <div class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-4 font-headline">Vuelo.email</div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                    Redefiniendo la comunicación digital a través de la integración perfecta de estándares abiertos.
+                </p>
+            </div>
+            <div>
+                <h5 class="font-headline text-base font-bold text-slate-900 dark:text-slate-50 mb-6">Producto</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-sm font-body"
+                            href="docs.html">Documentación</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-sm font-body"
+                            href="index.html#features">Características</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-headline text-base font-bold text-slate-900 dark:text-slate-50 mb-6">Legal</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-sm font-body"
+                            href="privacy-policy.html">Políticas de Privacidad</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-sm font-body"
+                            href="terms.html">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-headline text-base font-bold text-slate-900 dark:text-slate-50 mb-6">Recursos</h5>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-sm font-body"
+                            href="https://www.igniterealtime.org/projects/openfire/" target="_blank"
+                            rel="noopener noreferrer">Openfire</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors text-sm font-body"
+                            href="https://xmpp.org/" target="_blank" rel="noopener noreferrer">Estándares XMPP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 text-center">
+            <p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 Vuelo.email. Kinetic Sanctuary Design.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
